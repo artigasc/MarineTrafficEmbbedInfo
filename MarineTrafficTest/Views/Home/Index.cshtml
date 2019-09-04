@@ -1,0 +1,91 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br /> <br /> <br /> <br />
+<script type="text/javascript">
+    width = '100%';	// the width of the embedded map in pixels or percentage
+    height = '750';	// the height of the embedded map in pixels or percentage
+    border = '1';	// the width of the border around the map (zero means no border)
+    shownames = 'true';	// to display ship names on the map (true or false)
+    latitude = '37.4460';	// the latitude of the center of the map, in decimal degrees
+    longitude = '24.9467';	// the longitude of the center of the map, in decimal degrees
+    zoom = '0';	// the zoom level of the map (values between 2 and 17)
+    maptype = '0';	// use 0 for Normal Map, 1 for Satellite, 2 for OpenStreetMap
+    trackvessel = '351811000';	// MMSI of a vessel (note: vessel will be displayed only if within range of the system) - overrides "zoom" option
+    fleet = '';	// the registered email address of a user-defined fleet (user's default fleet is used)
+    //mtembedcode = '';
+    vtypes = '0';
+    //showmenu = "0";
+    remember = 'false';
+
+</script>
+<script type="text/javascript" src="https://www.marinetraffic.com/js/embed.js">
+
+
+</script>
+
+<br /> <br /> <br /> <br />
+
+<p>Click the button to print the current page.</p>
+
+<button onclick="myFunction()">Print this page</button>
+
+<script>
+    function myFunction() {
+        window.print();
+        }
+        $(document).ready(function () {
+           // console.log($('.embed-footer').html());
+        });
+    $(document).ready(function () {
+       
+        setTimeout(function () {
+                console.log($("#marinetraffic").contents().find("#globalBDSprite").html());
+                var iframe = document.getElementById("marinetraffic");
+        
+                console.log(iframe);
+           
+        
+        }, 6000);
+        });
+</script>
+<div class="row">
+    <div class="col-md-3">
+        <h2>Application uses</h2>
+        <ul>
+            <li>Sample pages using ASP.NET Core MVC</li>
+            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>How to</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Overview</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h2>Run &amp; Deploy</h2>
+        <ul>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
+            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
+        </ul>
+    </div>
+</div>
